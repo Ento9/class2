@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>PLJ Solidaire</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="">
+            </a>
+        </div>
+
+            <div class="link">
+                <a href="index.html#p1">Présidence</a>
+                <a href="index.html#p2">À Propos</a>
+                <a class="special-link" href="act.html">ActiConnex</a>
+            </div>
+
+            <div class="menu-img">
+                <button onclick="menu()">
+                    <img src="mobile-menu.png" alt="">
+                </button>
+            </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html#p1">Présidence</a>
+        <a href="index.html#p2">À Propos</a>
+        <a class="special-link" href="act.html">ActiConnex</a>
+    </div>
+
+    <div class="devlopement">
+
+        <div class="all-element">
+            <div class="text">
+                <h1>En développement</h1><br>
+                <p>Nous œuvrons activement en vue de son lancement de ActiConnex</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <iframe src="iframe.html" frameborder="1"></iframe>
+    
+    <footer id="p2" class="act-footer">
+        <h1>À Propos</h1>
+        <p><a href="https://www.tvanouvelles.ca/etat-ecoles-fermees">École Fermée</a>, &copy; 2023 PLJ Soldiaire</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        console.log("Hello World!");
+
+        let isMenuOpen = false;
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function menu() {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            // Utilisez une temporisation pour permettre à la grille d'apparaître après la transition d'opacité
+            setTimeout(() => {
+            mobileMenu.style.opacity = 1;
+            mobileMenu.style.display = 'grid'; // Afficher le menu en tant que grille
+            }, 0);
+        } else {
+            mobileMenu.style.opacity = 0;
+            mobileMenu.style.display = 'none'; // Masquer le menu après la transition d'opacité
+            setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            }, 500);
+        }
+        }
+
+
+
+    </script>
+</body>
+</html>

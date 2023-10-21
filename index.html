@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>PLJ Solidaire</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="">
+            </a>
+        </div>
+
+            <div class="link">
+                <a href="#p1">Présidence</a>
+                <a href="#p2">À Propos</a>
+                <a class="special-link" href="act.html">ActiConnex</a>
+            </div>
+
+            <div class="menu-img">
+                <button onclick="menu()">
+                    <img src="mobile-menu.png" alt="">
+                </button>
+            </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#p1">Présidence</a>
+        <a href="#p2">À Propos</a>
+        <a class="special-link" href="act.html">ActiConnex</a>
+    </div>
+
+    <div class="top-banner">
+        <h2>Plj Solidaire</h2>
+    </div>
+
+    <section class="container">
+
+        <div class="card">
+            <div class="card-image car-1"></div>
+            <h2>Notre Partie</h2>
+            <p>Pji Solidaire : une formation politique exceptionnelle prônant l'entraide, l'écoute attentive, l'amusement, et bien plus encore. Rejoignez notre mouvement pour un changement positif.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image car-2"></div>
+            <h2>Nos Valeur</h2>
+            <p>Nos valeurs fondamentales reposent sur l'entraide, l'écoute attentive et l'appréciation de moments de divertissement.</p>
+        </div>
+
+        <div id="p1" class="card">
+            <div class="card-image car-3"></div>
+            <h2>Nos Activités</h2>
+            <p>Le programme politique scolaire PLJ Solidaire vise à offrir des activités extrascolaires éducatives et créatives pour tous les élèves, favorisant ainsi leur développement personnel et social</p>
+        </div>
+
+    </section>
+
+    <div class="actcontainer">
+        <div class="curve"></div>
+        <div class="actcon">
+            <a class="special-link onpage" href="act.html">ActiConnex</a>
+        </div>
+
+        <div class="presentation">
+            <div class="left"><img src="logo.png" alt=""></div>
+            <div class="right"><h2>Bienvenue sur le nouveau site Web de PLJ Soldiaire</h2></div>
+        </div>
+    </div>
+
+    
+    
+    <footer class="footer1" id="p2">
+        <h1>À Propos</h1>
+        <p><a href="https://www.tvanouvelles.ca/etat-ecoles-fermees">École Fermée</a>, &copy; 2023 PLJ Soldiaire</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        console.log("Hello World!");
+
+        let isMenuOpen = false;
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function menu() {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            // Utilisez une temporisation pour permettre à la grille d'apparaître après la transition d'opacité
+            setTimeout(() => {
+            mobileMenu.style.opacity = 1;
+            mobileMenu.style.display = 'grid'; // Afficher le menu en tant que grille
+            }, 0);
+        } else {
+            mobileMenu.style.opacity = 0;
+            mobileMenu.style.display = 'none'; // Masquer le menu après la transition d'opacité
+            setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            }, 500);
+        }
+        }
+
+
+
+    </script>
+</body>
+</html>
